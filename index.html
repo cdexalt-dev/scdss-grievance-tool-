@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Know Your Rights & Grievance Helper | Suffolk County DSS</title>
+<!-- Version 10: removed repeated questions; carry step-one answers into complaint; separate what happened from its effects. -->
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:18px;color:#183245;background:#f7f9f8;line-height:1.5;--ink:#183245;--secondary:#496373;--teal:#006c67;--light:#e9f3f1;--border:#c8d9d8;--focus:#ad5f00}
+*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:#005b63;text-underline-offset:3px}a:hover{text-decoration-thickness:2px}:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+header{background:#12394a;color:#fff} .top{max-width:1050px;margin:auto;padding:21px 24px 26px} .eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:800;color:#add9d3}h1{font-size:clamp(1.6rem,3.9vw,2.3rem);line-height:1.18;letter-spacing:-.035em;margin:7px 0 10px}header p{margin:0;max-width:730px;color:#e1edec;font-size:.99rem}
+main{max-width:1050px;margin:28px auto 90px;padding:0 24px}.layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:30px;align-items:start}
+aside{position:sticky;top:18px;font-size:.83rem;color:var(--secondary)}aside strong{font-size:.8rem;color:var(--ink)}.progress{padding:18px;background:#fff;border:1px solid var(--border);border-radius:16px}.progress ol{margin:15px 0 0;padding:0;list-style:none;display:grid;gap:6px}.progress li{padding:8px 5px 8px 12px;border-left:3px solid #d6e3e1}.progress li.current{border-color:var(--teal);color:#004c49;font-weight:800;background:#f0f8f6}.progress li.done{border-color:#80aaa5;color:#325e5b}.progress small{display:block;margin-top:14px;line-height:1.5}
+.panel{background:white;border:1px solid var(--border);border-radius:18px;padding:clamp(20px,4vw,38px);box-shadow:0 8px 25px rgba(30,60,65,.05)}.step-index{font-weight:800;color:var(--teal);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em}h2{font-size:1.5rem;line-height:1.2;letter-spacing:-.02em;margin:8px 0 8px}h3{font-size:1.08rem;line-height:1.3;margin:18px 0 12px}.intro{color:var(--secondary);margin:0 0 25px}.field{margin:0 0 24px}.field>label,.field>legend{font-weight:750;display:block;margin-bottom:8px;color:var(--ink)}.field legend{padding:0}.hint{font-size:.82rem;color:#4b6771;margin:5px 0 11px}.req{color:#8c4800;font-weight:800}input[type=text],input[type=tel],input[type=email],input[type=date],select,textarea{width:100%;border:1.5px solid #99b4b6;border-radius:9px;background:#fff;color:#132e3c;padding:12px 13px;min-height:49px}textarea{min-height:96px;resize:vertical}input[type=checkbox],input[type=radio]{width:22px;height:22px;flex:0 0 22px;accent-color:#006c67;margin:1px 0 0}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.options.one{grid-template-columns:1fr}.option{display:flex;gap:11px;align-items:flex-start;border:1px solid #c6d8d6;border-radius:10px;padding:12px;background:#fcfefd;font-weight:500;line-height:1.35}.option:has(input:checked){border-color:#00746d;background:#eaf7f4}.group{margin:18px 0 22px;padding:16px;background:#f6f9f8;border:1px solid #dbe7e5;border-radius:12px}.group h3{margin:0 0 12px}.group .options{grid-template-columns:1fr}.detail{border-left:4px solid var(--teal);padding:15px 18px;margin:14px 0 25px;background:#f4faf8;border-radius:0 10px 10px 0}.detail[hidden],[hidden]{display:none!important}.notes{border:1px solid #b4c9c7;background:#f5faf8;padding:15px 18px;border-radius:12px;font-size:.86rem;margin:18px 0}.caution{border-left:4px solid #9a6213;background:#fff9ed;padding:14px 18px;border-radius:0 9px 9px 0;font-size:.86rem;margin:18px 0}.nav{display:flex;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid #dbe7e5;margin-top:30px;padding-top:22px}.btn{border:2px solid transparent;border-radius:10px;padding:12px 18px;background:var(--teal);color:#fff;font-weight:750;min-height:50px}.btn:hover{background:#004f4b}.btn.secondary{background:#fff;color:#075e59;border-color:#9ebeb9}.btn.secondary:hover{background:#f0f9f7}.btn.tertiary{background:none;color:#005e5b;border:none;text-decoration:underline;padding:9px}.btn:disabled{background:#9fb0b3;color:#fff;cursor:not-allowed}.actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.actions .btn{font-size:.86rem}.mini{font-size:.8rem;color:var(--secondary)}.error{color:#8b260c;font-weight:700;padding:12px 15px;background:#fff0e9;border:1px solid #edb8a5;border-radius:9px;margin:12px 0}.draft-head{display:grid;grid-template-columns:65px 1fr;align-items:center;gap:9px;margin:13px 0}.draft-head label{font-weight:750}.draft-head input{min-width:0}.draft{min-height:440px;font-size:.88rem;line-height:1.58}details{margin:16px 0;border:1px solid #cbdbda;border-radius:9px;padding:13px 16px}summary{cursor:pointer;font-weight:760}footer{max-width:1050px;margin:auto;padding:25px 24px 45px;border-top:1px solid #c8d9d8;color:#50636e;font-size:.78rem}.status{min-height:20px;font-weight:750;color:#005751}.callout{background:#edf5f3;border:1px solid #b9d6d1;padding:17px;border-radius:12px;margin:18px 0} .print-only{display:none}
+@media(max-width:770px){.layout{grid-template-columns:1fr;gap:15px}aside{position:static}.progress{padding:12px 16px}.progress ol{display:flex;overflow:auto;gap:4px;margin-top:7px}.progress li{flex:0 0 auto;border-left:0;border-bottom:3px solid #d6e3e1;padding:6px 9px}.progress li.current,.progress li.done{border-left:0;border-bottom-color:var(--teal)}aside small{display:none}.options{grid-template-columns:1fr}.panel{padding:22px 19px}.nav{gap:8px}.top{padding:22px 20px}main{padding:0 13px;margin:15px auto 60px}}
+@media print{body{background:white;color:black;font-size:11pt}header,aside,.nav,.actions,footer,.no-print,.notes,.caution,details,.draft-head,.intro,.step-index{display:none!important}main{margin:0;padding:0;max-width:100%}.layout{display:block}.panel{border:none;padding:0;box-shadow:none}section.step:not(#step-5){display:none!important}section#step-5{display:block!important}#step-5 h2{font-size:18pt}#draftText{display:none}.print-only{display:block;white-space:pre-wrap;word-break:break-word;font:11pt/1.5 system-ui,sans-serif}#printHead{font-size:11pt;margin-bottom:20px;white-space:pre-wrap}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+
+/* Version 5: broad overview, short topic summaries, expandable examples */
+.overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:17px 0 22px}
+.overview-item{margin:0;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 16px;min-width:0}
+.overview-item>summary{font-size:1rem;line-height:1.3;cursor:pointer;font-weight:800}
+.overview-item>p{margin:9px 0 0;color:var(--secondary);font-size:.84rem}
+.overview-item ul{margin:10px 0 0 0;padding-left:21px;font-size:.86rem;line-height:1.5}
+.overview-item li{margin-bottom:4px}
+.overview-note{font-size:.86rem;color:var(--secondary);margin:0 0 18px}
+.rights-lede{border-left:4px solid var(--teal);background:#eff8f6;padding:12px 16px;margin:8px 0 14px;border-radius:0 10px 10px 0}
+.rights-card ul{margin:8px 0 12px;padding-left:22px}
+.rights-card li{margin-bottom:7px}
+@media(max-width:690px){.overview-grid{grid-template-columns:1fr}}
+
+/* Know Your Rights information screens */
+.site-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.site-nav button{border:1px solid #acc8c8;background:transparent;color:#fff;padding:10px 13px;border-radius:9px;font:inherit;font-size:.83rem;font-weight:750;cursor:pointer}.site-nav button[aria-current=page]{background:#e4f4f0;color:#12394a;border-color:#e4f4f0}.site-nav button:hover{background:#31586a}.site-nav button[aria-current=page]:hover{background:#d4ece7}
+.top-content{max-width:940px}.welcome-card{background:linear-gradient(135deg,#f1f8f6,#fff 75%);border:1px solid var(--border);border-radius:18px;padding:clamp(22px,4vw,38px);box-shadow:0 8px 25px rgba(30,60,65,.04)}.welcome-card h2{font-size:clamp(1.6rem,4vw,2.15rem);max-width:700px}.welcome-card>p{max-width:735px;color:var(--secondary);font-size:1rem}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:23px 0 10px}.hero-actions .btn{min-width:190px}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:22px}.feature{border:1px solid var(--border);border-radius:15px;background:#fff;padding:20px}.feature h3{margin:5px 0 8px}.feature p{margin:0;color:var(--secondary);font-size:.9rem}.feature .number{display:inline-block;background:var(--light);color:#005d57;border-radius:50%;font-weight:800;text-align:center;width:35px;height:35px;padding-top:4px}
+.info-screen{max-width:920px;margin:0 auto}.info-screen .lead{color:var(--secondary);font-size:1.02rem}.info-heading{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}.info-heading .btn{font-size:.86rem}.rights-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}.rights-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px}.rights-card h3{margin:2px 0 10px}.rights-card p{margin:0 0 10px}.source{color:#506976;font-size:.76rem;margin-top:9px;display:block}.source a{font-weight:650}.info-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:23px;margin:18px 0}.info-card h3{margin-top:0}.time-track{border-left:3px solid #a8c9c5;padding-left:21px;margin:14px 0}.time-track li{margin:11px 0}.route-row{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.route-row>div{padding:18px;border-radius:12px;border:1px solid #cbdedc;background:#fcfefd}.right-tip{background:#edf7f5;border-left:4px solid #25857f;border-radius:0 10px 10px 0;padding:13px 16px;margin:15px 0 23px;font-size:.84rem}.right-tip strong{display:block;margin-bottom:4px}.right-tip .source{margin-top:5px}.quiet-link{font-size:.85rem}.actions-bottom{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.section-heading{margin-top:28px}.rights-card p{font-size:.94rem}
+@media(max-width:770px){.feature-grid,.rights-grid,.route-row{grid-template-columns:1fr}.site-nav{gap:6px;margin-top:17px}.site-nav button{padding:10px;font-size:.77rem}.feature{padding:17px}.info-card{padding:18px}}
+@media print{.site-nav,#siteLanding,#rightsPage,#afterPage,.right-tip{display:none!important}#formPage{display:block!important}}
+
+/* Plain-language topics: one topic at a time keeps pages shorter. */
+.choose-topic{padding:0;overflow:hidden}.choose-topic>summary{cursor:pointer;list-style:none;padding:16px;font-size:1rem;font-weight:800;color:#183245;background:#f4faf8}.choose-topic>summary::-webkit-details-marker{display:none}.choose-topic>summary:after{content:"+";float:right;font-size:1.2rem;color:#006c67}.choose-topic[open]>summary:after{content:"−"}.choose-topic>.hint,.choose-topic>.options,.choose-topic>.right-tip{margin:14px 16px 16px}.choose-topic>.options{display:grid}.choose-topic>.options.one{grid-template-columns:1fr}.choose-topic>.right-tip{background:#edf7f5}
+.topic-list{display:grid;gap:13px;margin:22px 0}.rights-topic{margin:0;border:1px solid var(--border);border-radius:15px;padding:0;background:#fff;overflow:hidden}.rights-topic>summary{display:flex;align-items:center;gap:15px;padding:19px 21px;font-size:1rem;line-height:1.35;background:#f3f8f7;list-style:none}.rights-topic>summary::-webkit-details-marker{display:none}.rights-topic>summary:after{content:"+";margin-left:auto;font-size:1.4rem;color:#006c67;font-weight:700}.rights-topic[open]>summary:after{content:"−"}.rights-topic>summary small{display:block;color:var(--secondary);font-size:.85rem;font-weight:400;margin-top:2px}.topic-number{display:inline-flex;align-items:center;justify-content:center;background:#d6eae5;border-radius:50%;width:38px;height:38px;flex:0 0 38px;font-weight:800;color:#00594f}.topic-content{padding:8px 18px 20px}.topic-content .rights-card{border:0;border-bottom:1px solid #dbe7e5;border-radius:0;padding:18px 5px;margin:0}.topic-content .rights-card:last-child{border-bottom:0}.rights-card h3{font-size:1.04rem;margin:0 0 8px}.rights-card p{font-size:.95rem;line-height:1.55;max-width:70ch}.rights-card p.example{border-left:3px solid #8aada7;padding-left:12px;margin-top:10px;color:#274653}.source-detail{border:0;padding:0;margin:12px 0 0;font-size:.84rem;color:var(--secondary)}.source-detail>summary{display:inline-block;font-size:.84rem;color:#005d66;text-decoration:underline;text-underline-offset:3px;font-weight:650;cursor:pointer}.source-detail p{font-size:.82rem;margin:7px 0 4px;color:var(--secondary)}.right-tip .source{font-size:.74rem}.right-tip{font-size:.91rem}.right-tip strong{font-size:.99rem}.intro{line-height:1.55}.topic-content .rights-card p.mini{font-size:.84rem}.route-row>div{background:#fff}.route-row li{line-height:1.55}details:not(.rights-topic):not(.source-detail){max-width:100%}
+@media(max-width:770px){.layout{grid-template-columns:minmax(0,1fr)}.layout>aside,.layout>.panel{min-width:0;width:100%}.progress,.progress ol{min-width:0;max-width:100%}.rights-topic>summary{padding:17px 14px}.topic-content{padding:3px 13px 14px}.topic-content .rights-card{padding:16px 3px}.rights-card p{font-size:1rem}}
+.skip-link{position:absolute;top:-100px;left:12px;background:#fff;color:#12394a;padding:9px 14px;border:2px solid #12394a;border-radius:9px;z-index:100}.skip-link:focus{top:8px}
+
+/* Version 7: Fair Hearing decision guide directly after right 12. */
+.fair-hearing-section{margin:15px 0 8px;background:#f5faf9;border:1px solid #a8c9c5;border-radius:13px;padding:clamp(17px,3vw,24px)}
+.fair-hearing-section h3{margin:0 0 13px;font-size:1.16rem}
+.fair-hearing-section p{margin:11px 0;line-height:1.55}
+.fair-hearing-section ul{margin:8px 0 14px;padding-left:25px}
+.fair-hearing-section li{margin:5px 0}
+.fair-hearing-section .fair-important{border-left:4px solid var(--teal);padding:11px 15px;background:#e5f3f0;border-radius:0 8px 8px 0}
+/* Fair Hearing guide: short comparisons and situational examples. */
+.fair-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 17px}
+.fair-compare>div{background:#fff;border:1px solid #c7dbd7;border-radius:12px;padding:16px}
+.fair-compare h4{font-size:1.02rem;margin:0 0 6px;color:#164353}
+.fair-compare p{font-size:.92rem;margin:5px 0}
+.fair-examples{display:grid;gap:11px;margin:15px 0 20px}
+.fair-example{background:#fff;border:1px solid #c7dbd7;border-radius:11px;padding:13px 16px}
+.fair-example strong{display:block;font-size:.92rem}
+.fair-example p{margin:5px 0 0;font-size:.89rem}
+.fair-example .path{color:#005a56;font-weight:800}
+.fair-hearing-section .fair-important{margin:16px 0}
+.fair-mini{border-left:4px solid #6b9590;background:#f2f8f6;border-radius:0 8px 8px 0;padding:14px 17px;margin:18px 0;font-size:.89rem}
+.fair-mini strong{display:block;margin-bottom:4px}
+.fair-mini p{margin:4px 0 8px}
+@media(max-width:720px){.fair-compare{grid-template-columns:1fr}.fair-example{padding:14px}.fair-hearing-section{padding:16px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#mainContent">Skip to main content</a>
+<header><div class="top"><div class="eyebrow">Disability access · Suffolk County DSS</div><h1>Know Your Rights &amp; Complaint Helper</h1><p>Learn what help you can ask for because of a disability. If something goes wrong, we can help you write a complaint.</p><nav class="site-nav" aria-label="Website sections"><button type="button" data-page="siteLanding" aria-current="page">Home</button><button type="button" data-page="rightsPage">Know Your Rights</button><button type="button" data-page="formPage">Write a complaint</button><button type="button" data-page="afterPage">After you file</button></nav></div></header>
+<main id="mainContent">
+<section id="siteLanding" class="top-content" aria-labelledby="welcomeTitle">
+ <div class="welcome-card">
+  <div class="step-index">Free · No sign-in needed</div>
+  <h2 id="welcomeTitle">Need help from Suffolk County DSS because of a disability?</h2>
+  <p>You can ask DSS for help or a change because of a disability. This can involve <strong>housing, food, health, benefits, appointments, communication, rules about work,</strong> or other DSS services.</p>
+  <p>If DSS says no, does not help, or gives you something that does not work, you can make a complaint. <strong>If your benefits or shelter assistance are also affected, you may need a State Fair Hearing, too.</strong></p>
+  <div class="hero-actions"><button class="btn" type="button" data-page="rightsPage">Learn my rights</button><button class="btn secondary" type="button" data-page="formPage">Write a complaint</button></div>
+  <p class="mini">This is not a government website. Your answers stay on this page while you use it. The website does not send your complaint for you.</p>
+ </div>
+ <div class="feature-grid" aria-label="What you can do here">
+  <div class="feature"><span class="number" aria-hidden="true">1</span><h3>Learn</h3><p>Read short explanations of your rights.</p></div>
+  <div class="feature"><span class="number" aria-hidden="true">2</span><h3>Tell your story</h3><p>Answer questions about what went wrong.</p></div>
+  <div class="feature"><span class="number" aria-hidden="true">3</span><h3>Write to DSS</h3><p>Get an email you can check, change, and send.</p></div>
+ </div>
+<section aria-labelledby="areasTitle" class="info-card" style="margin-top:20px">
+ <h2 id="areasTitle">What kind of help can I ask for?</h2>
+ <p>These are common areas where a disability may make DSS services harder to use. <strong>Choose a topic to see more examples.</strong> You can also ask for something not listed.</p>
+ <div class="overview-grid">
+  <details class="overview-item"><summary>Housing and shelter</summary><p>Where you stay, who stays with you, and whether the space meets your needs.</p><ul><li>A room to yourself, when sharing is hard or unsafe because of your disability</li><li>A room with a caregiver or support person</li><li>A shower, bathroom, entrance, or room you can safely use</li><li>A different shelter or room that meets your needs</li><li>Space and access for a service animal or medical equipment</li></ul></details>
+  <details class="overview-item"><summary>Health conditions, food, and allergies</summary><p>Help needed to safely manage a disability or health condition in DSS services.</p><ul><li>Safe meals for a serious nut or seafood allergy</li><li>Food or meal timing that meets disability-related diabetes needs</li><li>Safe food preparation, storage, or another workable meal option</li><li>Access to medicine, electricity for medical equipment, or health care</li><li>Changes because of smoke, mold, temperature, or other health barriers</li></ul></details>
+  <details class="overview-item"><summary>Benefits and money</summary><p>Getting or keeping the help you qualify for.</p><ul><li>SNAP (food benefits), Medicaid (health coverage), Temporary Assistance (money or emergency help)</li><li>Help applying for or keeping benefits</li><li>Asking DSS to fix benefits it cut or stopped after you did not get needed help</li><li>More time to turn in papers if DSS took too long to answer your request for disability-related help</li></ul></details>
+  <details class="overview-item"><summary>Applications, appointments, and work</summary><p>Changes to DSS rules or steps that are hard for you because of your disability.</p><ul><li>Help filling out forms or getting paperwork</li><li>Rescheduled appointments, shorter waits, or fewer visits</li><li>Phone appointments or visits to your home, when needed because of your disability</li><li>Changes to work hours, job tasks, or work rules</li></ul></details>
+  <details class="overview-item"><summary>Communication and access</summary><p>Getting information in a way you can use.</p><ul><li>Large print, Braille, audio, or digital files you can read or listen to</li><li>Sign-language interpreting or other communication help</li><li>Help reading DSS letters or talking on the phone</li><li>DSS offices and websites that you can use</li></ul></details>
+  <details class="overview-item"><summary>People who can help you</summary><p>Support with making requests or using services.</p><ul><li>A caregiver or someone you trust who can speak for you</li><li>Help from DSS staff to ask for disability-related help or make a complaint</li><li>Help when a shelter or outside company provides DSS services</li></ul></details>
+  <details class="overview-item"><summary>When DSS says no or the help fails</summary><p>What happens if your needs are not met.</p><ul><li>DSS says no, promises help but does not give it, or takes too long</li><li>DSS offers different help, but it still does not work for you</li><li>DSS cuts or stops your benefits, or closes your case, after not giving you needed help</li><li>Making a complaint or asking for a Fair Hearing</li></ul></details>
+ </div>
+ <p class="overview-note"><strong>These are examples, not a complete list.</strong> DSS must look at what each person needs. No one is automatically promised a particular room, meal, or benefit just because it appears here.</p>
+ <button class="btn secondary" type="button" data-page="rightsPage">Learn what DSS must do</button>
+</section>
+ <div class="info-card"><h3>What does “reasonable accommodation” mean?</h3>
+ <p>It means <strong>help or a change you need because of a disability</strong> so you can use DSS programs and services.</p>
+ <p><strong>Examples:</strong> Someone with a serious peanut allergy may need shelter meals prepared without peanuts touching their food. Someone with diabetes may need a meal arrangement that works with their health needs. Someone who needs help from a caregiver may need a different room arrangement.</p>
+ <p class="mini">DSS must look at the person's needs. The same choice will not work for everyone.</p>
+ <details class="source-detail"><summary>Where does this rule come from?</summary><p><em>Newkirk</em> settlement, sections II(A)(22–24) and VII(A), (D); Procedure 899, pages 5–6 and 9. The allergy and diabetes situations above are examples, not promises of a specific meal.</p></details>
+ </div>
+</section>
+<section id="rightsPage" class="info-screen" aria-labelledby="rightsTitle" hidden>
+ <div class="info-heading"><div><div class="step-index">Know Your Rights</div><h2 id="rightsTitle">Your rights in four topics</h2></div><button class="btn secondary" type="button" data-page="formPage">Write a complaint</button></div>
+ <p class="lead">DSS has rules for helping people with disabilities. These rules are called <strong>Procedure 899</strong>. Open a topic below to learn more.</p>
+ <p class="hint">A <strong>reasonable accommodation</strong> means help or a change you need because of your disability. A <strong>grievance</strong> means an official complaint.</p>
+ <div class="topic-list">
+  <details class="rights-topic" open><summary><span class="topic-number">1</span><span><strong>Getting help from DSS</strong><small>What you can ask for and what DSS must do</small></span></summary><div class="topic-content">
+   <article class="rights-card"><h3>1. You can ask in your own words</h3><p>Tell any DSS worker what help you need because of your disability. You can ask in person, by phone, or in writing. You do not need a special form or legal words. DSS must keep a record of your request.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, sections II(A)(24), VII(A)–(B); Procedure 899, pages 7–9.</p></details></article>
+   <article class="rights-card"><h3>2. DSS must work with you</h3><p>DSS must look at your own needs and listen to what you think will help. If DSS cannot give you the help you requested, it must consider another option that actually works for you.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section VII(A)(6), VII(D); Procedure 899, page 9.</p></details></article>
+   <article class="rights-card"><h3>3. DSS must act and tell you what is happening</h3><p>For regular requests, DSS should usually decide within five workdays after it has what it needs, when possible. Emergency help may need a same-day decision. If DSS needs more time, it must explain the delay and the next steps.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section VII(E)(1–5), including notice and emergency rules; Procedure 899, pages 9–11.</p></details></article>
+   <article class="rights-card"><h3>4. Your privacy matters</h3><p>DSS should not ask for more medical details than it needs to work out your request. Information about your disability must be protected. Staff should also notice when someone may need help asking.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section VII(C)(1–11); Procedure 899, pages 2, 8–9.</p></details></article>
+  </div></details>
+  <details class="rights-topic"><summary><span class="topic-number">2</span><span><strong>What kind of help is possible?</strong><small>Housing, health, food, benefits, and more</small></span></summary><div class="topic-content">
+   <article class="rights-card"><h3>5. Help can cover many parts of DSS services</h3><p>Help because of a disability can involve shelter, benefits, appointments, work rules, communication, and other DSS services. DSS must also address these needs when outside companies or shelters provide services for DSS.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, sections VII(A)(1–5), VII(I); Procedure 899, pages 1–2 and 5–6.</p></details></article>
+   <article class="rights-card"><h3>6. See examples of help people can ask for</h3><p>Here are possible requests. <strong>The list is not complete.</strong> DSS must consider your needs before deciding.</p>
+     <details><summary>Housing, rooms, and shelter</summary><ul><li>A room to yourself if sharing is hard or unsafe because of your disability</li><li>Staying in a shelter with your caregiver or someone who helps care for you</li><li>A shower with grab bars, a bathroom you can use, or a room without stairs</li><li>A different shelter or room when the one DSS gives you does not work</li><li>Access for service animals and necessary medical equipment</li></ul></details>
+     <details><summary>Health conditions, food, and allergies</summary><ul><li>Food that is safe for a serious nut or seafood allergy</li><li>Meal choices or timing that meet disability-related diabetes needs</li><li>Safe food preparation, storage, or another food arrangement</li><li>Changes for medical equipment, medication, smoke, heat, or other health needs</li></ul></details>
+     <details><summary>Benefits, forms, and appointments</summary><ul><li>Help filling out or renewing applications and gathering papers</li><li>More time, a different appointment, or a phone or home visit</li><li>Changes to work tasks or schedules when needed because of a disability</li><li>Help when DSS cut or stopped benefits after you did not get the help you needed</li></ul></details>
+     <details><summary>Communication, reading, and support</summary><ul><li>Large print, Braille, audio, or digital files you can read or listen to</li><li>Sign-language interpreters or help reading letters</li><li>Ways to contact DSS or use its website that work for you</li><li>Help from DSS staff or someone you trust to speak for you</li></ul></details>
+     <p class="mini">These are examples of help you can ask for. DSS must look at your needs before deciding. The examples do not promise you a particular room, meal, or service.</p>
+     <details class="source-detail"><summary>Where do these examples come from?</summary><p>Procedure 899, pages 5–6, 17–20, 23; Settlement, sections VII(A), (D), (I); Newkirk comprehensive digest, page 20 (examples described as plaintiffs' allegations).</p></details>
+   </article>
+  </div></details>
+  <details class="rights-topic"><summary><span class="topic-number">3</span><span><strong>When the help does not work</strong><small>Delays, denied requests, and benefit cuts</small></span></summary><div class="topic-content">
+   <article class="rights-card"><h3>7. A yes on paper is not enough</h3><p>If DSS approves help but you never receive it, or the help does not work for your disability, you can report that problem. DSS must track its decisions and when approved help was actually provided.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, sections VII(E)–(F); October 2025 SCDSS grievance notice.</p></details></article>
+   <article class="rights-card"><h3>8. DSS cannot just send you somewhere else</h3><p>DSS may suggest another agency or service. But sending you somewhere else does not replace help DSS itself is required to give you.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Procedure 899, page 19, section 12.</p></details></article>
+   <article class="rights-card"><h3>9. DSS must look at why you could not follow a rule</h3><p>If you missed an appointment or deadline because you did not get the help you needed, DSS must consider that before cutting or stopping your benefits. If DSS finds the unmet need caused the problem, it must undo a cut, stop, or restriction in benefits. A cut for not following a rule is sometimes called a <strong>sanction</strong>.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section VII(E)(6–9); Procedure 899, pages 16–17.</p></details></article>
+  </div></details>
+  <details class="rights-topic" id="rightsTopic4"><summary><span class="topic-number">4</span><span><strong>Complaints and next steps</strong><small>How to speak up and get an answer</small></span></summary><div class="topic-content">
+   <article class="rights-card"><h3>10. You can make a complaint</h3><p>If DSS says no to help you need because of your disability, or the help does not work, you can make a <strong>complaint (grievance)</strong>. You can also complain if DSS treats you unfairly because of your disability. DSS must answer within certain time limits. If you disagree with the answer, you can ask DSS to review it again (appeal).</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section IX; Procedure 899, pages 14–16; October 2025 grievance notice.</p></details></article>
+   <article class="rights-card"><h3>11. You can get help making a complaint</h3><p>DSS staff must help you file if you need it. Ask for another way to file if you cannot use a written form. Someone you trust may also be able to make the complaint for you.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section IX(D)–(E); Procedure 899, page 14.</p></details></article>
+   <article class="rights-card"><h3>12. You still have other rights</h3><p>DSS cannot treat you badly for making a complaint. You can also ask for a <strong>Fair Hearing</strong>, where New York State reviews a decision DSS made about your benefits or services—or a time DSS failed to act.</p><details class="source-detail"><summary>Where does this rule come from?</summary><p>Settlement, section IX(G); Procedure 899, page 15; ADA 1 complaint form.</p></details></article>
+   <section class="fair-hearing-section" aria-labelledby="fairHearingTitle">
+    <h3 id="fairHearingTitle">Do I need a Fair Hearing, a complaint, or both?</h3>
+    <p><strong>You do not have to wait for DSS to answer your complaint before asking for a Fair Hearing.</strong> These are two different ways to address a problem. You may be able to use both at the same time.</p>
+    <div class="fair-compare" aria-label="The difference between a Fair Hearing and a complaint">
+     <div><h4>Fair Hearing</h4><p>Ask <strong>New York State</strong> to review what DSS decided about your <strong>benefits or services</strong>, or a time DSS failed to act.</p><p class="mini">For example: DSS cut your SNAP benefits or denied temporary housing help.</p></div>
+     <div><h4>Complaint (grievance)</h4><p>Tell <strong>Suffolk County DSS</strong> that it did not properly handle <strong>help you needed because of your disability</strong>.</p><p class="mini">For example: DSS approved a disability-related change but never provided it.</p></div>
+    </div>
+    <p class="fair-important"><strong>When might I need both?</strong> When a disability-related problem also affects your benefits or shelter assistance. You can file a complaint <em>and</em> request a Fair Hearing without waiting for either one to finish.</p>
+    <h4 style="margin:18px 0 8px">Some examples</h4>
+    <div class="fair-examples">
+     <div class="fair-example"><strong>DSS says no to the help you need because of a disability.</strong><p class="path">Consider: Complaint.</p><p>If DSS has not also made a benefits or services decision you can challenge, the complaint process may be the better place to start.</p></div>
+     <div class="fair-example"><strong>You miss an appointment because DSS did not give you needed disability-related help. Then DSS stops your cash assistance.</strong><p class="path">Consider: Both.</p><p>File a complaint about the help you did not get. Request a Fair Hearing promptly to challenge the benefits decision.</p></div>
+     <div class="fair-example"><strong>DSS refuses to help you get shelter, or gives you shelter that does not meet your needs because of your disability.</strong><p class="path">Consider: Both.</p><p>A Fair Hearing may let you challenge a shelter-help decision or a time DSS failed to act. A complaint lets you report how DSS handled your disability-related needs.</p></div>
+     <div class="fair-example"><strong>Your shelter agreed to provide safe meals because of an allergy, but the meals still are not safe. No benefits decision has been made.</strong><p class="path">Consider: Complaint.</p><p>Explain why the meals are not safe for you. If you are also challenging a DSS shelter decision or its failure to act, ask right away whether you can request a Fair Hearing.</p></div>
+     <div class="fair-example"><strong>DSS has not acted on your benefits application when it should.</strong><p class="path">Consider: Fair Hearing.</p><p>You can also make a complaint if DSS did not give you help you needed because of your disability, and that caused the delay.</p></div>
+    </div>
+    <p><strong>When should I ask?</strong> As soon as you know there may be a problem with benefits or services. You do <strong>not</strong> need to finish a DSS complaint first. Even if you already filed a complaint and are waiting for an answer, you can request a Fair Hearing.</p>
+    <p><strong>How much time do I have?</strong> Fair Hearing deadlines are often <strong>60 days</strong> for Temporary Assistance and <strong>90 days</strong> for SNAP. Other programs or issues can have different rules. Check any letter DSS sent you (called a notice), and ask promptly.</p>
+    <p><strong>Can my benefits stay the same while I wait?</strong> Sometimes. If DSS plans to cut or stop benefits, requesting a Fair Hearing <strong>before the change takes effect</strong> may allow your benefits to continue for now. The rules vary, and you might have to repay some benefits if you lose.</p>
+    <p><strong>How do I ask?</strong> Visit the <a href="https://otda.ny.gov/hearings/" target="_blank" rel="noopener noreferrer">New York State Fair Hearings page</a> or call <a href="tel:+18003423334">1-800-342-3334</a>. You can explain your situation and have someone help you. The State—not this website—handles Fair Hearing requests.</p>
+    <p class="fair-important"><strong>Do not miss your deadline.</strong> Making a DSS complaint does not give you more time to ask for a Fair Hearing. This website writes a DSS complaint; it <strong>does not request a Fair Hearing for you</strong>.</p>
+    <details class="source-detail"><summary>Where does this information come from?</summary><p><em>Newkirk</em> settlement § IX(G) preserves Fair Hearing rights. See also SCDSS Procedure 899 pp. 14–16; New York State OTDA's Fair Hearing guidance and 18 NYCRR § 358-3.5. Availability, deadlines, and whether benefits can continue depend on the program and the issue.</p></details>
+   </section>
+  </div></details>
+ </div>
+ <div class="info-card"><h3>Want to report a problem?</h3><p>You can use this tool to write a complaint. You can check the email and change it before you send it.</p><button class="btn" type="button" data-page="formPage">Write my complaint</button></div>
+ <div class="info-card"><h3>Want more information from Suffolk County DSS?</h3><p>Visit the <a href="https://suffolkcountyny.gov/Departments/Social-Services/ADA-Information" target="_blank" rel="noopener noreferrer">SCDSS ADA information page</a>. It explains how to request an accommodation and where to find official complaint forms.</p><p class="mini">This short guide does not cover every rule or promise a particular room, meal, or DSS decision.</p></div>
+</section>
+<section id="afterPage" class="info-screen" aria-labelledby="afterTitle" hidden>
+ <div class="info-heading"><div><div class="step-index">After you file</div><h2 id="afterTitle">What happens after you complain?</h2></div><button class="btn secondary" type="button" data-page="formPage">Write a complaint</button></div>
+ <p class="lead">Here is what Procedure 899 says DSS should do after getting your complaint.</p><p class="hint">A <strong>workday</strong> is usually Monday through Friday, not including holidays. <strong>Calendar days</strong> include weekends.</p>
+ <div class="route-row">
+  <div><h3>Most complaints</h3><ol class="time-track"><li><strong>Send it as soon as you can.</strong> Usually, you must complain within <strong>180 days</strong> of what happened.</li><li><strong>DSS confirms it got your complaint.</strong> Within <strong>10 workdays</strong>.</li><li><strong>DSS reviews it.</strong> DSS prepares a written decision within <strong>60 days</strong> of getting your complaint.</li><li><strong>You can appeal.</strong> If you disagree, you usually have <strong>30 calendar days</strong> after getting the written decision to appeal.</li><li><strong>DSS answers your appeal.</strong> Within <strong>30 calendar days</strong> of getting it.</li></ol><details class="source-detail"><summary>Where does this rule come from?</summary><p>Procedure 899, pages 14–15, section 8.</p></details></div>
+  <div><h3>When DSS denies emergency help</h3><p>This faster process is for someone whose <strong>accommodation needed for emergency or immediate help was denied</strong>. Not every urgent problem follows this process.</p><ol class="time-track"><li><strong>File within 24 hours</strong> after DSS denies the request.</li><li>DSS should confirm receipt within <strong>48 hours</strong>, when possible.</li><li>DSS should decide as soon as possible, or within <strong>7 workdays</strong>, when possible.</li><li>If you disagree, appeal within <strong>24 hours</strong> of the decision.</li><li>DSS must send the final appeal decision within <strong>7 workdays</strong> after getting the appeal.</li></ol><details class="source-detail"><summary>Where does this rule come from?</summary><p>Procedure 899, pages 15–16, section 8.</p></details></div>
+ </div>
+ <div class="info-card"><h3>Where do I send my complaint?</h3><p><strong>Email:</strong> <a href="mailto:SCDSS_ADA@suffolkcountyny.gov">SCDSS_ADA@suffolkcountyny.gov</a></p><p><strong>Mail:</strong> ADA Compliance Officer, Suffolk County DSS — Commissioner's Office, 3085 Veterans Memorial Highway, Ronkonkoma, NY 11779.</p><p><strong>Phone:</strong> <a href="tel:+16318549930">631-854-9930</a> · <strong>Fax:</strong> 631-854-9996</p><p><strong>Important:</strong> The October 2025 DSS notice asks you to fill out <strong>ADA 1 (DSS’s official complaint form)</strong>. This website only writes an email; it does not fill out or send that form. Ask DSS for the form or help with it.</p></div>
+ <div class="info-card"><h3>More things to know</h3><p><strong>Need help filing?</strong> Ask DSS. Staff must help when needed. You can ask for another way to file if you cannot use the form.</p><p><strong>Need help right now?</strong> Contact DSS directly. Do not wait for an email reply.</p><p><strong>Did DSS refuse, cut, stop, or fail to give you benefits or shelter help?</strong> You may also need a Fair Hearing. Filing a complaint does not give you more time to ask for one. <strong>You do not need to wait</strong> for DSS to answer your complaint.</p><button class="btn secondary" type="button" data-fair-guide>When to use a Fair Hearing or both</button><details class="source-detail"><summary>Where does this rule come from?</summary><p>Procedure 899, pages 14–16, section 8; <em>Newkirk</em> settlement, section IX(G).</p></details></div>
+ <div class="actions-bottom"><button class="btn" type="button" data-page="formPage">Write a complaint</button><button class="btn secondary" type="button" data-page="rightsPage">Read my rights</button></div>
+</section>
+<div class="layout" id="formPage" hidden><aside aria-label="Your progress"><div class="progress"><strong>YOUR PROGRESS</strong><ol id="progress"><li class="current" aria-current="step">1. What you needed</li><li>2. What happened</li><li>3. How it affected you</li><li>4. What you need now</li><li>5. Your name & contact</li><li>6. Check your email</li></ol><small>No account needed. This website does not save your answers after you leave.</small></div></aside>
+<div class="panel"><div id="errors" class="error" role="alert" tabindex="-1" hidden></div>
+<section aria-labelledby="title-0" class="step" id="step-0"><div class="step-index">Step 1 of 6</div><h2 id="title-0">What help did you need?</h2><p class="intro">You can ask DSS to change how it helps you because of a disability. <strong>Open a topic</strong> below. Pick any examples that fit, or write your own.</p><div class="right-tip"><strong>You can ask by talking to a worker.</strong>You do not need a special form to ask for help. DSS should write down what you asked for. <span class="source">Procedure 899, pp. 8–9, § 5(A). <button class="btn tertiary" data-page="rightsPage" type="button">Read about my rights</button></span></div>
+<details class="group choose-topic"><summary class="choose-title">Housing and shelter</summary><p class="hint">Choose what would make the housing or shelter work for you.</p><div class="options one">
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a private or single-person room because sharing creates a disability-related barrier"/>A private room instead of sharing a room</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="housing or shelter that allows me to stay with a caregiver or support person"/>A room or placement with my caregiver or support person</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="an accessible shower or bathroom, including necessary grab bars"/>A bathroom or shower I can safely use</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a room or building that I can enter and move around in safely"/>A room or building I can get around in</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a first-floor or step-free shelter room due to mobility needs"/>A room without stairs or other barriers</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a different shelter location or placement that meets my disability-related needs"/>A different shelter or room that meets my needs</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a place I can safely stay because of disability-related health or sensory needs"/>A place that is safe for my health or other disability needs</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="a shelter placement that accepts and accommodates my service animal"/>A shelter where I can have my service animal</label>
+</div></details>
+<details class="group choose-topic"><summary class="choose-title">Health conditions, meals, and allergies</summary><p class="hint">These are examples. You do not need to tell us the name of your medical condition.</p><div class="options one">
+<label class="option"><input data-diet="1" data-housing="1" name="accom" type="checkbox" value="food that is safe for my serious allergy or other disability-related food restriction"/>Food I can safely eat because of an allergy or health condition</label>
+<label class="option"><input data-diet="1" data-housing="1" name="accom" type="checkbox" value="a meal plan or meal timing that meets my disability-related health needs"/>Different food or meal times for my health needs</label>
+<label class="option"><input data-diet="1" data-housing="1" name="accom" type="checkbox" value="food prepared or served without contact with ingredients that could make me sick"/>Food prepared safely so it does not touch things that could make me sick</label>
+<label class="option"><input data-diet="1" data-housing="1" name="accom" type="checkbox" value="another way to get safe meals when the meals provided do not work for me"/>Another way to get food I can safely eat</label>
+<label class="option"><input data-diet="1" data-housing="1" name="accom" type="checkbox" value="a suitable space to store, prepare, or receive food because of my disability"/>A safe place to keep or prepare food</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="shelter conditions that address disability-related problems with smoke, mold, heat, cold, or chemicals"/>Changes because smoke, mold, heat, cold, or smells affect my health</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="access to electricity, equipment, medical supplies, medication storage, or needed treatment"/>Access to my medical equipment, medicine, or care</label>
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="changes to a placement or schedule because of disability-related noise, light, or mental health needs"/>Help with noise, light, or mental health needs</label>
+</div></details>
+<details class="group choose-topic"><summary class="choose-title">Benefits, applications, and paperwork</summary><div class="options one">
+<label class="option"><input name="accom" type="checkbox" value="help applying for, keeping, or renewing SNAP, Medicaid, or Temporary Assistance benefits"/>Help getting or keeping benefits, including SNAP, Medicaid, or cash assistance</label>
+<label class="option"><input name="accom" type="checkbox" value="help getting emergency or expedited benefits or Temporary Housing Assistance"/>Help getting emergency benefits or shelter assistance</label>
+<label class="option"><input name="accom" type="checkbox" value="help completing or understanding an application or renewal"/>Help filling out or understanding forms</label>
+<label class="option"><input name="accom" type="checkbox" value="help gathering and turning in documents needed for benefits"/>Help getting or sending paperwork</label>
+<label class="option"><input name="accom" type="checkbox" value="extra time or an adjusted deadline because of a disability-related need"/>More time to meet a deadline</label>
+<label class="option"><input name="accom" type="checkbox" value="review of benefits stopped, reduced, or denied because necessary disability-related help was not provided"/>Help when my benefits were cut, stopped, or denied</label>
+</div></details>
+<details class="group choose-topic"><summary class="choose-title">Appointments, visits, and work rules</summary><div class="options one">
+<label class="option"><input name="accom" type="checkbox" value="a disability-related change to an appointment, interview, or location"/>A changed or rescheduled appointment</label>
+<label class="option"><input name="accom" type="checkbox" value="shorter waits or fewer return visits because of disability"/>Less waiting or fewer trips to DSS</label>
+<label class="option"><input name="accom" type="checkbox" value="a telephone interview or home visit because I cannot attend the office"/>A phone interview or a visit to my home</label>
+<label class="option"><input name="accom" type="checkbox" value="changes to employment or work activity tasks, schedules, or requirements due to disability"/>Changes to my work hours, tasks, or requirements</label>
+<label class="option"><input name="accom" type="checkbox" value="help meeting DSS rules I could not follow without a disability-related accommodation"/>Help meeting a DSS rule because of my disability</label>
+</div></details>
+<details class="group choose-topic"><summary class="choose-title">Communication and access</summary><div class="options one">
+<label class="option"><input name="accom" type="checkbox" value="notices or forms in large print, Braille, audio, or an accessible digital format"/>Letters or forms I can read or listen to</label>
+<label class="option"><input name="accom" type="checkbox" value="qualified sign-language interpretation or communication assistance"/>A sign-language interpreter or other communication help</label>
+<label class="option"><input name="accom" type="checkbox" value="staff assistance reading or explaining documents"/>Someone to help me read or understand information</label>
+<label class="option"><input name="accom" type="checkbox" value="a different way to get notices or talk with DSS, such as telephone communication"/>A phone call or another way to talk with DSS</label>
+<label class="option"><input name="accom" type="checkbox" value="access to DSS buildings, online applications, or other services"/>An office, website, or DSS service I can use</label>
+<label class="option"><input name="accom" type="checkbox" value="language interpretation to communicate effectively with DSS"/>Someone to translate between DSS and me (an interpreter)</label>
+</div></details>
+<details class="group choose-topic"><summary class="choose-title">Help from people and other needs</summary><div class="options one">
+<label class="option"><input data-housing="1" name="accom" type="checkbox" value="assistance from a caregiver, support person, or authorized representative during DSS or shelter services"/>Help from my caregiver, support person, or someone I choose</label>
+<label class="option"><input name="accom" type="checkbox" value="staff assistance asking for an accommodation or filing a complaint"/>DSS staff to help me ask for help or make a complaint</label>
+<label class="option"><input name="accom" type="checkbox" value="help that a DSS contractor or service provider is responsible for providing"/>Help from a shelter worker or other DSS service provider</label>
+<label class="option"><input name="accom" type="checkbox" value="review of a benefit cut, case closing, or sanction connected to an unmet accommodation need"/>Help when DSS cuts or stops benefits after I could not follow a rule</label>
+</div></details>
+<div class="field"><label for="requested">What did you need? (In your own words)</label><p class="hint">You can skip this box if you already chose an answer.</p><textarea id="requested" placeholder="Example: I needed a private room because sharing makes my disability harder to manage."></textarea></div>
+<div class="field"><p class="hint">Choose these if you want more questions about shelter or food.</p><div class="options one"><label class="option"><input id="housingToggle" type="checkbox"/>This is about shelter or housing</label><label class="option"><input id="dietToggle" type="checkbox"/>This is about food, allergies, or meals</label></div></div>
+<div class="field"><label for="requestStatus">What happened when you asked DSS for help? <span class="req">*</span></label><select id="requestStatus"><option value="">Choose one</option><option value="approved">DSS said yes</option><option value="denied">DSS said no</option><option value="pending">I asked but did not hear back</option><option value="never">I needed help but did not know how to ask</option><option value="unknown">I am not sure</option></select></div>
+<div class="field"><label for="requestDate">When did you ask, if you remember?</label><input id="requestDate" type="date"/></div>
+</section>
+<section class="step" id="step-1" aria-labelledby="title-1" hidden><div class="step-index">Step 2 of 6</div><h2 id="title-1">What actually happened?</h2><p class="intro">You already told us whether DSS said yes, said no, or has not answered. Now tell us anything else that went wrong.</p><div class="right-tip"><strong>DSS must listen to you.</strong>DSS must look at what you need. If they offer different help, it should still work for you. <span class="source">Procedure 899, p. 9, § 5(B).</span></div>
+<div class="notes" id="earlierAnswer" role="status" aria-live="polite"><strong>From Step 1:</strong> <span id="earlierAnswerText">Your earlier answer will appear here.</span> We will put this in your complaint. You do not have to choose it again.</div>
+<fieldset class="field"><legend>Did anything else go wrong? (Choose any that fit.)</legend><p class="hint">You can leave these blank if your answer in Step 1 already explains the problem.</p><div class="options one">
+<label class="option"><input name="problem" type="checkbox" value="my approved accommodation was not provided">DSS said yes but I did not get the help</label>
+<label class="option"><input name="problem" type="checkbox" value="the help I received was different from what I requested">DSS gave me something different</label>
+<label class="option"><input name="problem" type="checkbox" value="the help I received did not meet my needs">The help I got did not work for me</label>
+<label class="option"><input name="problem" type="checkbox" value="DSS took too long to provide approved help">DSS approved the help, but I was kept waiting</label>
+<label class="option"><input name="problem" type="checkbox" value="DSS stopped providing help I had before">DSS stopped helping me the way it used to</label>
+<label class="option"><input name="problem" type="checkbox" value="something else went wrong with my disability-related needs">Something else happened</label>
+</div></fieldset>
+<div class="field" id="actualInfo" hidden><label for="actual">What did DSS give you instead? (Optional)</label><textarea id="actual" placeholder="Tell us about the different help you got, if you have not already explained it."></textarea></div>
+<div id="housingDetails" class="detail" hidden><h3>Tell us more about housing or shelter</h3>
+ <div class="right-tip"><strong>DSS must consider the housing needs connected to your disability.</strong> That may include a different room, a caregiver, or changes to the placement. It depends on your situation. <span class="source">Settlement, section VII(D)–(E); Procedure 899, pages 5–6 and 9.</span></div>
+ <fieldset class="field"><legend>What was wrong with the room or shelter DSS provided? Choose any that add to your answer.</legend><div class="options one">
+ <label class="option"><input type="checkbox" name="housingProblem" value="I needed a private or single-person room but was assigned a shared room">I needed a room alone, but DSS placed me with other people</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="I could not stay with a caregiver or support person I needed">I could not stay with my caregiver or support person</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="there were stairs or an entrance I could not use">The entrance or stairs were not safe or usable for me</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="the bathroom or shower was not accessible or lacked needed safety features">I could not safely use the bathroom or shower</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="the room or building did not work with my wheelchair, walker, or mobility needs">I could not move around the room or building safely</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="DSS gave me a different room or shelter than I needed">DSS put me in a different place than the one I needed</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="DSS would not change a placement that did not meet my disability-related needs">DSS would not move me after I explained the problem</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="the place did not meet my disability-related safety, sensory, or mental health needs">The living arrangement was not safe or workable for me</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="the housing did not accommodate my service animal">I could not have my service animal</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="smoke, mold, temperature, or other environmental conditions affected my health">Smoke, mold, heat, cold, or smells affected my health</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="I could not safely use medical equipment or store medication">I could not use medical equipment or store medicine</label>
+ <label class="option"><input type="checkbox" name="housingProblem" value="I could not get necessary treatment or caregiver assistance">I could not get the care or support I need</label>
+ </div></fieldset>
+ <p class="hint">You already told us what help you needed in Step 1. We will use it in your complaint.</p>
+ <div class="field"><label for="housingCurrent">Are you still staying there?</label><select id="housingCurrent"><option value="">Choose one</option><option>Yes</option><option>No</option><option>I have not been placed yet</option><option>I'm not sure</option></select></div>
+</div>
+
+<div id="dietDetails" class="detail" hidden><h3>Tell us about food or allergies</h3><div class="right-tip"><strong>Food must work for your disability-related needs.</strong> For example, a person with a serious nut or seafood allergy may need food kept away from that ingredient. Someone with diabetes may need a different meal plan or timing. DSS must look at individual needs. <span class="source">Settlement, section VII(D); Procedure 899, page 9.</span></div>
+<p class="hint">You already told us what food help you needed in Step 1. Add only new details here.</p>
+<fieldset class="field"><legend>What went wrong with the food? Choose any.</legend><div class="options one">
+<label class="option"><input type="checkbox" name="dietProblem" value="food described as safe may still have touched an ingredient that could make me sick">My food may have touched something I am allergic to or that could make me sick</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="the food or meals offered do not meet my disability-related dietary restriction">The food is not safe for me to eat</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="the meal schedule or meal choices do not meet my disability-related health needs">The meal choices or times do not work for my health needs</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="a previously approved food accommodation is not being carried out">DSS approved food help but did not provide it</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="staff or the meal provider could not explain the ingredients or how the food is prepared">No one could tell me what was in the food or how it was made</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="I was not offered an effective alternative to unsafe meals">No other safe food was offered</label>
+<label class="option"><input type="checkbox" name="dietProblem" value="I could not store, make, or bring my own safe food">I could not store, make, or bring my own safe food</label>
+</div></fieldset>
+<div class="field"><label for="foodProviderResponse">What did DSS or the people making the food tell you? (Optional)</label><textarea id="foodProviderResponse" rows="2" placeholder="Tell us what they said about the food, what was in it, or how it was made."></textarea></div>
+<div class="field"><label for="foodSafeNow">Can you get enough food that is safe for you today?</label><select id="foodSafeNow"><option value="">Choose one (optional)</option><option value="yes">Yes</option><option value="no">No</option><option value="sometimes">Only sometimes</option><option value="unsure">I'm not sure</option></select></div>
+<div id="foodUrgentTip" class="caution" hidden><strong>Need safe food today?</strong> Call or talk to DSS or shelter staff now. Do not wait for this email. Tell us on the next page if you need help right away.</div>
+</div>
+<div class="field"><label for="incidentDate">When did this happen? <span class="req">*</span></label><input id="incidentDate" type="date"><label class="option" style="margin-top:9px"><input id="dateUnknown" type="checkbox">I don't know the exact date</label></div>
+<div class="field"><label for="incidentWhere">Where did this happen? <span class="req">*</span></label><select id="incidentWhere"><option value="">Choose one</option><option>At a DSS service center</option><option>At a shelter or housing placement</option><option>On the phone</option><option>Through mail or a notice</option><option>Online</option><option>Through a shelter worker or company working for DSS</option><option>Somewhere else</option></select></div>
+<div class="field"><label for="office">Which DSS office, shelter, or worker was involved? (If known)</label><input id="office" type="text" placeholder="Name, office, or location"></div>
+<div class="field"><label for="story">Is there anything else DSS or shelter staff said or did? (Optional)</label><p class="hint">You do not need to repeat an answer you already chose. If the choices do not tell the whole story, explain it here.</p><textarea id="story" placeholder="Example: A worker said there were no other rooms available, but did not tell me when I would get the help I needed." rows="4"></textarea></div>
+<div class="field"><label for="witnesses">Did anyone else see what happened? (Optional)</label><textarea id="witnesses" rows="2" placeholder="Names or contact information, if you want to include them"></textarea></div>
+</section>
+<section class="step" id="step-2" aria-labelledby="title-2" hidden><div class="step-index">Step 3 of 6</div><h2 id="title-2">How did it affect you?</h2><p class="intro">You told us what DSS did. Now tell us what happened to you because of it. It is okay if nothing has happened yet.</p><div class="right-tip"><strong>If DSS cut your benefits, you may be able to challenge it.</strong> If DSS finds you could not follow a rule because it did not give you needed disability-related help, it must undo a cut, stop, or restriction in benefits. <span class="source">Procedure 899, pp. 16–17, § 9.</span></div>
+<fieldset class="field"><legend>What changed for you because DSS did not give you the help you needed? (Choose any.)</legend><p class="hint">These are the effects of the problem, not what DSS did. You do not need to repeat your answer from Step 2.</p><div class="options one">
+<label class="option"><input type="checkbox" name="impact" value="I was unable to stay at the shelter or had to leave">I could not stay at the shelter or had to leave</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not sleep or rest safely">I could not sleep or rest safely</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not wash or care for myself safely">I could not wash or care for myself safely</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not get enough safe food and missed meals">I missed meals or went without enough food I could safely eat</label>
+<label class="option"><input type="checkbox" name="impact" value="I had to pay for food I could safely eat">I had to buy food I could safely eat</label>
+<label class="option"><input type="checkbox" name="impact" value="I got sick or worried I might get sick">I got sick, or I worried about getting sick</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not get needed medical care or support">I missed medical care or help I needed</label>
+<label class="option"><input type="checkbox" name="impact" value="I missed an appointment or deadline">I missed an appointment or deadline</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not apply for or keep my benefits because I could not finish the paperwork">I couldn't apply for benefits or finish papers to keep them</label>
+<label class="option"><input type="checkbox" name="impact" value="my SNAP, Medicaid, or Temporary Assistance benefits were delayed, denied, reduced, or stopped">My benefits were late, cut, stopped, or denied</label>
+<label class="option"><input type="checkbox" name="impact" value="DSS told me it might cut or stop my benefits">DSS said it might cut or stop my benefits</label>
+<label class="option"><input type="checkbox" name="impact" value="I could not understand or respond to important DSS information">I couldn't understand or answer a DSS letter</label>
+<label class="option"><input type="checkbox" name="impact" value="I had to make extra trips or calls">I had to go back or call again</label>
+<label class="option"><input type="checkbox" name="impact" value="I am worried the problem will get worse">I am worried the problem will get worse</label>
+</div></fieldset>
+<div class="field" id="spendingInfo" hidden><label for="spendingDetails">About how much did you have to spend? (Optional)</label><p class="hint">You do not need to know the exact amount. You can say how often you had to buy food.</p><textarea id="spendingDetails" rows="2" placeholder="Example: About $25 per day for the past week."></textarea></div>
+<div class="fair-mini" id="fairHearingTip" hidden><strong>You may need BOTH a complaint and a Fair Hearing.</strong><p>You said benefits or shelter assistance may have been affected. New York State may be able to review what DSS decided about your benefits or services, or when DSS did not act. You do not have to wait for DSS to answer this complaint first.</p><p><strong>Fair Hearing deadlines are separate.</strong> Call <a href="tel:+18003423334">1-800-342-3334</a> or see <a href="https://otda.ny.gov/hearings/" target="_blank" rel="noopener noreferrer">New York State's Fair Hearings page</a>.</p><button class="btn secondary" type="button" data-fair-guide>How do I know when to use both?</button></div>
+<div class="field"><label for="impactOther">Anything else about how this affected you? (Optional)</label><textarea id="impactOther" placeholder="If you want, add how long this went on or other things you could not do."></textarea></div>
+<div class="field"><label for="ongoing">Is the problem still happening?</label><select id="ongoing"><option value="">Choose one</option><option>Yes</option><option>No</option><option>I'm not sure</option></select></div>
+<div class="field"><label for="reported">Did you already tell DSS about this?</label><select id="reported"><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option><option value="unknown">I'm not sure</option></select></div>
+<div id="reportedInfo" class="detail" hidden><label for="pastReports">Who did you contact and what happened?</label><textarea id="pastReports" rows="3" placeholder="About when did you contact DSS? It is okay if you do not remember the exact date."></textarea></div>
+<fieldset class="field"><legend>Do you have anything that could help show what happened? (Optional)</legend><p class="hint">You do not have to upload anything. You can decide later what to send with your email.</p><div class="options one">
+<label class="option"><input type="checkbox" name="evidence" value="an accommodation request or approval">A request for help or a letter saying DSS approved it</label>
+<label class="option"><input type="checkbox" name="evidence" value="messages with DSS or shelter staff">Messages with DSS or shelter staff</label>
+<label class="option"><input type="checkbox" name="evidence" value="meal-provider ingredient or preparation information">Information from the food provider</label>
+<label class="option"><input type="checkbox" name="evidence" value="food purchase receipts or expense records">Receipts for food I paid for</label>
+<label class="option"><input type="checkbox" name="evidence" value="shelter placement information, caregiver correspondence, or room assignment details">Shelter placement records or letters about a caregiver</label>
+<label class="option"><input type="checkbox" name="evidence" value="notices, photographs, or other supporting records">Letters, photos, or other proof</label>
+</div></fieldset>
+</section>
+<section class="step" id="step-3" aria-labelledby="title-3" hidden><div class="step-index">Step 4 of 6</div><h2 id="title-3">Do you need help right now?</h2><p class="intro">Tell us if this cannot wait. Then choose what you want DSS to do.</p><div class="right-tip"><strong>Some urgent denials have shorter deadlines.</strong>If DSS said no to help you need for an emergency, the special complaint process says to file within <strong>24 hours</strong>. If you need help now, contact DSS directly. <span class="source">Procedure 899, pp. 15–16, § 8.</span></div>
+<fieldset class="field"><legend>Do you need help right away?</legend><div class="options one"><label class="option"><input name="urgency" type="radio" value="yes">Yes — I need help right away</label><label class="option"><input name="urgency" type="radio" value="no">No — I can wait</label><label class="option"><input name="urgency" type="radio" value="unsure">I'm not sure</label></div></fieldset>
+<div id="urgentSafetyNotice" class="caution" hidden><strong>If your health or safety is at risk now:</strong> Do not wait for DSS to answer a complaint. If you are having serious trouble breathing or another medical emergency, call 911 or seek emergency medical help.</div>
+<div id="urgentInfo" class="detail" hidden><div class="field"><label for="urgentNeed">What do you need right now, and why?</label><textarea id="urgentNeed" placeholder="Example: I have nowhere accessible to sleep tonight, or I cannot obtain urgently needed food assistance."></textarea></div><div class="field"><label for="denialDate">If DSS said no to urgent help, when did they say no?</label><input id="denialDate" type="date"></div><p class="hint">The 24-hour complaint rule is for denied help needed for an emergency. If something else is urgent, tell DSS right away, too.</p></div>
+<fieldset class="field"><legend>How do you want DSS to fix the problem? <span class="req">*</span></legend><div class="options one"><label class="option"><input type="checkbox" name="resolution" value="provide the accommodation I originally requested">Give me the help I asked for</label><label class="option"><input type="checkbox" name="resolution" value="provide an effective accommodation that meets my disability-related needs">Give me help that works for me</label><label class="option"><input type="checkbox" name="resolution" value="provide or change my housing or shelter placement to meet my disability-related needs">Give me a shelter or room that meets my needs</label>
+<label class="option"><input type="checkbox" name="resolution" value="review and provide a private or single-person room if needed for my disability">Review my request for a private room</label>
+<label class="option"><input type="checkbox" name="resolution" value="provide placement that allows needed support from my caregiver">Arrange a placement with my caregiver or support person</label>
+<label class="option"><input type="checkbox" name="resolution" value="provide a bathroom, shower, and building I can safely use">Provide a bathroom, shower, or room I can safely use</label>
+<label class="option"><input type="checkbox" name="resolution" value="address needed medical equipment, medication, or treatment access">Help me use my medical equipment or get care</label>
+<label class="option"><input type="checkbox" name="resolution" value="provide meals or a food arrangement that safely meets my disability-related needs">Help me get food I can safely eat</label>
+<label class="option"><input type="checkbox" name="resolution" value="address ingredient information, shared preparation, and cross-contact concerns">Make sure my food does not touch things that could make me sick</label>
+<label class="option"><input type="checkbox" name="resolution" value="allow a suitable arrangement for storing, preparing, or receiving safe food">Let me safely store, make, or receive food</label>
+<label class="option"><input type="checkbox" name="resolution" value="review the extra food expenses caused by the unmet accommodation">Look at the money I had to spend</label><label class="option"><input type="checkbox" name="resolution" value="restore the accommodation that was previously approved">Give me back the help I used to get</label><label class="option"><input type="checkbox" name="resolution" value="correct a denial, interruption, reduction, or delay in my benefits">Fix my benefits</label><label class="option"><input type="checkbox" name="resolution" value="review or withdraw any sanction or adverse action related to the unmet accommodation need">Fix a cut, stop, or limit on my benefits</label><label class="option"><input type="checkbox" name="resolution" value="reschedule an appointment or extend a deadline affected by my disability">Change my appointment or deadline</label><label class="option"><input type="checkbox" name="resolution" value="explain the decision and how the accommodation will be implemented">Tell me why DSS decided this and what happens next</label><label class="option"><input type="checkbox" name="resolution" value="ensure this accommodation is followed in future">Keep this from happening again</label></div></fieldset>
+<div class="field"><label for="resolutionOther">Any other solution you want?</label><textarea id="resolutionOther" placeholder="Tell DSS what you want it to do."></textarea></div>
+</section>
+<section class="step" id="step-4" aria-labelledby="title-4" hidden><div class="step-index">Step 5 of 6</div><h2 id="title-4">Who is making this complaint?</h2><p class="intro">DSS asks for your name, address, and phone number. We will put them in your email draft. This website does not save them.</p><div class="right-tip"><strong>You can ask for help.</strong>DSS must help you file a complaint if you need it. You can also ask for another way to file. <span class="source">Procedure 899, p. 14, § 8.</span></div>
+<fieldset class="field"><legend>Is this complaint for you or someone else?</legend><div class="options one"><label class="option"><input type="radio" name="filing" value="self" checked>It's for me</label><label class="option"><input type="radio" name="filing" value="other">It's for someone else</label></div></fieldset>
+<div id="representative" class="detail" hidden><div class="field"><label for="affectedName">Name of the person who had the problem <span class="req">*</span></label><input id="affectedName" type="text" autocomplete="off"></div><div class="field"><label for="relationship">How do you know this person?</label><input id="relationship" type="text" placeholder="Advocate, family member, attorney, etc."></div><div class="field"><label for="permission">Did this person say you can file for them?</label><select id="permission"><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option><option value="unknown">Not sure</option></select></div><p class="hint">The official DSS complaint form (ADA 1) asks whether this person gave permission. Check that form before sending your complaint.</p></div>
+<div class="field"><label for="fullName">Your full name <span class="req">*</span></label><input id="fullName" type="text" autocomplete="off"></div>
+<div class="field"><label for="mailAddress">Mailing address (or another address where DSS can reach you) <span class="req">*</span></label><textarea id="mailAddress" rows="2" autocomplete="off" placeholder="Street or mailing address, city, state and ZIP. If you have no fixed address, explain how DSS can reach you."></textarea></div>
+<div class="field"><label for="phone">Phone number <span class="req">*</span></label><input id="phone" type="tel" autocomplete="off" placeholder="Your best number, or explain below if you don't have one"><label class="option" style="margin-top:10px"><input id="noPhone" type="checkbox">I don't have a phone number</label></div>
+<div class="field"><label for="email">Your email address (optional)</label><input id="email" type="email" autocomplete="off" placeholder="you@example.com"></div>
+<div class="field"><label for="contactPref">How do you want DSS to contact you?</label><input id="contactPref" type="text" placeholder="Example: Email, telephone, large-print letter, ASL interpreter"></div>
+<div class="field"><label for="otherAgency">Did you tell another government office or court about this?</label><select id="otherAgency"><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option><option value="unsure">I'm not sure</option></select></div>
+<div id="otherAgencyInfo" class="detail" hidden><label for="otherAgencyDetail">Which office or court? (If known)</label><textarea id="otherAgencyDetail" rows="2"></textarea></div>
+<div class="notes">This website does not save or send your answers. You choose when to send your complaint.</div>
+</section>
+<section class="step" id="step-5" aria-labelledby="title-5" hidden><div class="step-index">Step 6 of 6</div><h2 id="title-5">Copy and send your complaint</h2><p class="intro">Read your message and change anything you want. Then copy it, open your email, and paste it into a new message. Nothing is sent by this website.</p>
+<div id="fairHearingDraftNotice" class="fair-mini no-print" hidden><strong>Before you send: Do you also need a Fair Hearing?</strong><p>This email is a DSS complaint only. If DSS said no to benefits or shelter help, cut or stopped your help, or did not act on your request, you may also need a State Fair Hearing now. Do not wait for a response to this email.</p><p><a href="https://otda.ny.gov/hearings/" target="_blank" rel="noopener noreferrer">New York State Fair Hearings</a> · <a href="tel:+18003423334">1-800-342-3334</a></p></div>
+<div id="urgentSafetyReview" class="caution no-print" hidden><strong>Need help right now?</strong> Do not wait for a grievance decision if you are in immediate danger. If you are having serious trouble breathing or another medical emergency, call 911 or seek emergency medical help.</div>
+<div id="emergencyNotice" class="caution no-print" hidden><strong>This may be an emergency complaint.</strong> If DSS denied help needed for an emergency, Procedure 899 says to file within <strong>24 hours</strong> after the denial. If you need help now, contact DSS directly. Do not wait for an email.</div>
+<div class="caution no-print"><strong>One more thing:</strong> SCDSS asks people to fill out <strong>ADA 1 (its official complaint form)</strong>. This tool does not fill out or send that form. Fill it out and attach it to your email, or ask DSS to help you file another way. <a href="https://suffolkcountyny.gov/Departments/Social-Services/ADA-Information" target="_blank" rel="noopener noreferrer">SCDSS ADA information</a>.</div>
+<div class="draft-head no-print"><label for="toField">To</label><input id="toField" type="text" value="SCDSS_ADA@suffolkcountyny.gov" readonly></div>
+<div class="draft-head no-print"><label for="ccField">CC</label><input id="ccField" type="text" placeholder="Optional — leave blank unless you want to copy someone" aria-describedby="ccHint"></div><p id="ccHint" class="mini no-print">CC means someone else who will get a copy of this email. Only add someone you want to share it with. The rules we reviewed do not name anyone you must copy.</p>
+<div class="draft-head no-print"><label for="subjectField">Subject</label><input id="subjectField" type="text" value="Reasonable Accommodation Grievance — Procedure 899"></div>
+<label class="no-print" for="draftText" style="font-weight:750">Your message (you can change it)</label><textarea id="draftText" class="draft no-print" spellcheck="true" aria-label="Editable grievance email"></textarea>
+<div id="printHead" class="print-only"></div><div id="printBody" class="print-only"></div>
+<div class="actions no-print"><button id="copyButton" type="button" class="btn">Copy my message</button><button id="printButton" type="button" class="btn secondary">Print or save a copy</button></div><div id="actionStatus" class="status no-print" role="status" aria-live="polite"></div>
+<div class="notes no-print"><strong>How to send it:</strong> 1. Click <strong>Copy my message</strong>. 2. Open your email and start a new message. 3. Put the <strong>To</strong> address and <strong>Subject</strong> shown above into your email. 4. Paste your message and check it. 5. Attach the ADA 1 form if you are using it, then press <strong>Send</strong>. Keep a copy of what you sent.</div>
+<details class="no-print"><summary>How else can I send this?</summary><p>ADA Compliance Officer<br>Suffolk County DSS — Commissioner's Office<br>3085 Veterans Memorial Highway<br>Ronkonkoma, NY 11779</p><p>Phone: <a href="tel:16318549930">631-854-9930</a><br>Fax: 631-854-9996<br>For assistance or another way to file: <a href="tel:16318549999">631-854-9999</a>.</p></details>
+<details class="no-print"><summary>What happens after I send it?</summary><p><strong>Most complaints:</strong> DSS must tell you it got your complaint within 10 workdays. DSS prepares its decision within 60 days. If you disagree, you have 30 calendar days after getting the decision to ask for another review (appeal). DSS then has 30 calendar days to send its final decision.</p><p><strong>If DSS said no to help needed for an emergency:</strong> The special complaint process says to file within 24 hours after DSS says no. DSS should tell you it got your complaint within 48 hours when possible and decide as soon as possible, or within seven workdays when possible. If you disagree, appeal within 24 hours of the decision. DSS must send the final answer within seven workdays after getting the appeal.</p><p>These are the rules for DSS complaints. They do not replace a State Fair Hearing. If your benefits may be cut or stopped, ask about a Fair Hearing right away. Its deadline is separate.</p></details>
+<details class="no-print"><summary>Where do these rules come from?</summary><p>This helper was built using the <em>Newkirk</em> settlement (Mar. 14, 2022), especially §§ VII and IX; SCDSS Procedure 899 (updated February 2022), especially § 8 pp. 14–16; the SCDSS ADA 12 Grievance Notice (Rev. 10/25); and the ADA 1 Service Discrimination Complaint Form (Rev. 3/22).</p><p>You can ask for disability-related help by speaking or writing to DSS. DSS staff must help you make a complaint if you need help. DSS cannot treat you badly for making a complaint. You can still ask New York State for a Fair Hearing. This website is for learning. It cannot decide whether the settlement protects you or whether you can get benefits. Check official DSS instructions before sending a complaint.</p></details>
+<div class="right-tip no-print"><strong>After you send it:</strong>DSS should tell you it got your complaint within 10 workdays. If you disagree with the decision, you can appeal. <button class="btn tertiary" type="button" data-page="afterPage">See what happens next</button><span class="source">Procedure 899, pp. 14–16, § 8.</span></div><div class="callout no-print"><strong>Keep a copy.</strong> Save the email you sent, your ADA 1 form if used, any proof, and the date you sent it.</div>
+</section>
+<div class="nav no-print"><button class="btn secondary" type="button" id="backBtn" hidden>Back</button><button class="btn" type="button" id="nextBtn">Continue</button></div>
+</div></div></main>
+<footer>Made for educational testing with the DRSJ Clinic. Examples are made up and do not name real clients. This is not a DSS website. It does not replace the official complaint form, send your complaint, or save your answers.</footer>
+<script>
+(function(){'use strict';
+const $=id=>document.getElementById(id), $$=sel=>Array.from(document.querySelectorAll(sel));let step=0;
+const pages=['siteLanding','rightsPage','formPage','afterPage'];
+function showPage(id){pages.forEach(p=>$(p).hidden=p!==id);$$('[data-page]').filter(e=>e.closest('nav')).forEach(b=>{if(b.dataset.page===id)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});window.scrollTo({top:0,behavior:'auto'});if(id==='formPage'){$('title-'+step).setAttribute('tabindex','-1');$('title-'+step).focus({preventScroll:true})}else{const head=id==='siteLanding'?'welcomeTitle':id==='rightsPage'?'rightsTitle':'afterTitle';$(head).setAttribute('tabindex','-1');$(head).focus({preventScroll:true})}}
+$$('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+$$('[data-fair-guide]').forEach(b=>b.addEventListener('click',()=>{showPage('rightsPage');$('rightsTopic4').open=true;const heading=$('fairHearingTitle');heading.setAttribute('tabindex','-1');heading.scrollIntoView({block:'start',behavior:'auto'});heading.focus({preventScroll:true})}));
+
+const val=id=>$(id).value.trim();const checked=name=>$$('input[name="'+name+'"]:checked').map(e=>e.value);const chosen=name=>checked(name)[0]||'';
+function joinList(items){return items.length===1?items[0]:items.length===2?items.join(' and '):items.slice(0,-1).join(', ')+', and '+items.at(-1)}
+function mightNeedFairHearing(){return checked('impact').some(v=>v.includes('SNAP, Medicaid, or Temporary Assistance benefits')||v.includes('DSS told me it might cut or stop my benefits')||v.includes('unable to stay at the shelter'))}
+function showWhen(){
+ const fair=mightNeedFairHearing();$('fairHearingTip').hidden=!fair;$('fairHearingDraftNotice').hidden=!fair;
+ const housing=Boolean($$('input[name="accom"][data-housing]:not([data-diet]):checked').length||$('housingToggle').checked);
+ const diet=Boolean($$('input[name="accom"][data-diet]:checked').length||$('dietToggle').checked);
+ $('housingDetails').hidden=!housing;$('dietDetails').hidden=!diet;
+ $('foodUrgentTip').hidden=!(diet&&['no','sometimes'].includes(val('foodSafeNow')));
+ $('actualInfo').hidden=!checked('problem').includes('the help I received was different from what I requested');
+ $('spendingInfo').hidden=!checked('impact').includes('I had to pay for food I could safely eat');
+ $('reportedInfo').hidden=val('reported')!=='yes';$('urgentInfo').hidden=chosen('urgency')!=='yes';$('urgentSafetyNotice').hidden=chosen('urgency')!=='yes';$('representative').hidden=chosen('filing')!=='other';$('otherAgencyInfo').hidden=val('otherAgency')!=='yes';
+ $('incidentDate').disabled=$('dateUnknown').checked;$('phone').disabled=$('noPhone').checked;
+ const statusLabel={approved:'DSS said yes.',denied:'DSS said no.',pending:'You asked DSS, but it has not answered.',never:'You needed help but did not know how to ask.',unknown:'You are not sure whether DSS approved the help.'};
+ $('earlierAnswerText').textContent=statusLabel[val('requestStatus')]||'You have not chosen an answer yet.';
+}
+$$('input,select,textarea').forEach(e=>{if(e.id==='draftText')return;e.addEventListener('change',showWhen)});
+function error(message){$('errors').textContent=message;$('errors').hidden=false;$('errors').focus();return false}
+function validate(n){$('errors').hidden=true;
+if(n===0){if(!val('requested')&&!checked('accom').length)return error('Choose one kind of help or tell us what you needed.');if(!val('requestStatus'))return error('Choose what happened when you asked for help.')}
+if(n===1){if(!val('incidentDate')&&!$('dateUnknown').checked)return error("Choose the date, or check I do not know the exact date.");if(!val('incidentWhere'))return error('Choose where the problem happened.');if(!['denied','pending'].includes(val('requestStatus'))&&!checked('problem').length&&!(!$('housingDetails').hidden&&checked('housingProblem').length)&&!(!$('dietDetails').hidden&&(checked('dietProblem').length||['no','sometimes'].includes(val('foodSafeNow'))))&&!val('story'))return error('Tell us what DSS did or choose something that went wrong.')}
+if(n===3){if(!checked('resolution').length&&!val('resolutionOther'))return error('Choose or tell us what you want DSS to do.')}
+if(n===4){if(chosen('filing')==='other'&&!val('affectedName'))return error('Enter the name of the person affected.');if(!val('fullName'))return error('Enter your name.');if(!val('mailAddress'))return error('Enter a mailing address or explain how DSS can reach you.');if(!val('phone')&&!$('noPhone').checked)return error('Enter your phone number or check that you do not have one.');if(val('email')&&!$('email').checkValidity())return error('Check the format of your email address.')}
+return true}
+const line=(label,text)=>text?label+': '+text+'\n':'';
+const readableDate=s=>s?/^(\d{4})-(\d{2})-(\d{2})$/.test(s)?s.slice(5,7)+'/'+s.slice(8,10)+'/'+s.slice(0,4):s:'';
+const sentence=s=>{let x=(s||'').trim().replace(/\b(i)\b/g,'I').replace(/\bcant\b/gi,"can't").replace(/\bdont\b/gi,"don't").replace(/\bwont\b/gi,"won't");if(!x)return '';x=x[0].toUpperCase()+x.slice(1);return /[.!?]$/.test(x)?x:x+'.'};
+const lowerFirst=s=>s?s[0].toLowerCase()+s.slice(1):s;
+const dedupe=items=>[...new Set(items.filter(Boolean))];
+const problemSentences={
+ 'my approved accommodation was not provided':'Although DSS approved the help, I did not receive it.',
+ 'the help I received was different from what I requested':'DSS offered something different from what I asked for.',
+ 'the help I received did not meet my needs':'The help DSS offered did not meet my disability-related needs.',
+ 'DSS took too long to provide approved help':'I waited for help DSS had already approved.',
+ 'DSS stopped providing help I had before':'DSS stopped providing help that I had received before.'
+};
+const housingSentences={
+ 'I needed a private or single-person room but was assigned a shared room':'I needed a private room, but DSS placed me in a shared room.',
+ 'I could not stay with a caregiver or support person I needed':'My placement did not allow me to stay with a caregiver or support person I needed.',
+ 'there were stairs or an entrance I could not use':'I could not safely use the entrance or stairs.',
+ 'the bathroom or shower was not accessible or lacked needed safety features':'I could not safely use the bathroom or shower.',
+ 'the room or building did not work with my wheelchair, walker, or mobility needs':'I could not safely move around the room or building with my mobility needs.',
+ 'DSS gave me a different room or shelter than I needed':'DSS placed me in a different room or shelter than I needed.',
+ 'DSS would not change a placement that did not meet my disability-related needs':'I have not been moved after explaining why the placement did not meet my needs.',
+ 'the place did not meet my disability-related safety, sensory, or mental health needs':'The living arrangement did not meet my disability-related safety, sensory, or mental health needs.',
+ 'the housing did not accommodate my service animal':'The shelter did not accommodate my service animal.',
+ 'smoke, mold, temperature, or other environmental conditions affected my health':'Conditions in the shelter have affected my health.',
+ 'I could not safely use medical equipment or store medication':'I could not safely use my medical equipment or store medicine.',
+ 'I could not get necessary treatment or caregiver assistance':'I could not get the medical care or help from a caregiver that I needed.'
+};
+const dietSentences={
+ 'food described as safe may still have touched an ingredient that could make me sick':'The food described as safe may have come into contact with something that could make me sick.',
+ 'the food or meals offered do not meet my disability-related dietary restriction':'The meals offered were not safe for me to eat because of my health needs.',
+ 'the meal schedule or meal choices do not meet my disability-related health needs':'The meal choices or meal times did not meet my health needs.',
+ 'a previously approved food accommodation is not being carried out':'Food-related help DSS approved has not been provided.',
+ 'staff or the meal provider could not explain the ingredients or how the food is prepared':'Staff could not tell me what was in the food or how it was prepared.',
+ 'I was not offered an effective alternative to unsafe meals':'I was not offered another safe meal option.',
+ 'I could not store, make, or bring my own safe food':'I could not store, prepare, or bring my own safe food.'
+};
+const impactSentences={
+ 'I was unable to stay at the shelter or had to leave':'I could not stay at the shelter or had to leave.',
+ 'I could not sleep or rest safely':'I could not sleep or rest safely.',
+ 'I could not wash or care for myself safely':'I could not wash or care for myself safely.',
+ 'I could not get enough safe food and missed meals':'I went without meals or enough food I could safely eat.',
+ 'I had to pay for food I could safely eat':'I had to spend my own money on food I could safely eat.',
+ 'I got sick or worried I might get sick':'I felt sick or was worried I might become sick.',
+ 'I could not get needed medical care or support':'I missed medical care or other help I needed.',
+ 'I missed an appointment or deadline':'I missed an appointment or deadline.',
+ 'I could not apply for or keep my benefits because I could not finish the paperwork':'I could not finish the papers needed to apply for or keep benefits.',
+ 'my SNAP, Medicaid, or Temporary Assistance benefits were delayed, denied, reduced, or stopped':'My benefits were delayed, denied, cut, or stopped.',
+ 'DSS told me it might cut or stop my benefits':'DSS said it might cut or stop my benefits.',
+ 'I could not understand or respond to important DSS information':'I could not understand or respond to important DSS information.',
+ 'I had to make extra trips or calls':'I had to make extra trips or phone calls.',
+ 'I am worried the problem will get worse':'I am worried the problem will get worse.'
+};
+const resolutionSentences={
+ 'provide the accommodation I originally requested':'provide the help I originally requested',
+ 'provide an effective accommodation that meets my disability-related needs':'make sure the help provided actually meets my disability-related needs',
+ 'provide or change my housing or shelter placement to meet my disability-related needs':'provide or change my shelter placement so it meets my disability-related needs',
+ 'review and provide a private or single-person room if needed for my disability':'consider and provide a private room if needed for my disability',
+ 'provide placement that allows needed support from my caregiver':'arrange a placement where I can receive help from my caregiver or support person',
+ 'provide a bathroom, shower, and building I can safely use':'provide a bathroom, shower, or room I can safely use',
+ 'address needed medical equipment, medication, or treatment access':'make sure I can use my medical equipment, store medicine, or get needed care',
+ 'provide meals or a food arrangement that safely meets my disability-related needs':'provide food I can safely eat',
+ 'address ingredient information, shared preparation, and cross-contact concerns':'address my concerns about food ingredients and how meals are prepared',
+ 'allow a suitable arrangement for storing, preparing, or receiving safe food':'let me safely store, prepare, or receive food',
+ 'review the extra food expenses caused by the unmet accommodation':'review the money I had to spend on food because I did not get the help I needed',
+ 'restore the accommodation that was previously approved':'restore the help DSS previously approved',
+ 'correct a denial, interruption, reduction, or delay in my benefits':'fix the problem with my benefits',
+ 'review or withdraw any sanction or adverse action related to the unmet accommodation need':'review and undo any cut, stop, or limit on my benefits caused by missing disability-related help',
+ 'reschedule an appointment or extend a deadline affected by my disability':'change my appointment or give me more time to meet a deadline',
+ 'explain the decision and how the accommodation will be implemented':'explain the decision and when the help will be provided',
+ 'ensure this accommodation is followed in future':'make sure this problem does not happen again'
+};
+const evidenceLabels={
+ 'an accommodation request or approval':'a copy of my request or approval',
+ 'messages with DSS or shelter staff':'messages with DSS or shelter workers',
+ 'meal-provider ingredient or preparation information':'information about the ingredients or how meals were prepared',
+ 'food purchase receipts or expense records':'receipts for food I had to buy',
+ 'shelter placement information, caregiver correspondence, or room assignment details':'shelter placement papers or messages about my caregiver or room',
+ 'notices, photographs, or other supporting records':'notices, photos, or other records'
+};
+function storySentence(raw){
+ const s=raw.trim();if(!s)return '';
+ if(/^said (they|someone|he|she|staff) would call me back but (did not|didn't)/i.test(s))return 'DSS staff said someone would call me back, but I did not get a call.';
+ if(/^they said they would call me back but (did not|didn't)/i.test(s))return 'DSS staff said someone would call me back, but I did not get a call.';
+ if(/^(i|we|dss|the |staff|my |someone |a worker )/i.test(s))return sentence(s);
+ return 'I also reported the following: “'+s+'”.';
+}
+function pastReportSentence(raw){
+ const s=raw.trim();if(!s)return 'I reported this problem to DSS before.';
+ if(/^(ms\.?|mrs\.?|mr\.?|dr\.?)\s+[\w'’\-]+\.?$/i.test(s))return 'I previously reported the problem to '+s.replace(/^(Ms|Mrs|Mr|Dr)\s+/i,'$1. ').replace(/\.$/,'')+'.';
+ if(/^(i|we|dss|the |staff|my )/i.test(s))return 'I reported the problem before. '+sentence(s);
+ return 'I reported the problem before. I gave these details about that report: “'+s+'”.';
+}
+function environmentalSentence(){
+ const source=[val('requested'),val('story'),val('urgentNeed')].join(' ').toLowerCase();
+ const terms=[];
+ if(/\bmold\b/.test(source))terms.push('mold');
+ if(/\bsmoke\b/.test(source))terms.push('smoke');
+ if(/\bheat\b|\bhot\b/.test(source))terms.push('heat');
+ if(/\bcold\b/.test(source))terms.push('cold');
+ if(/\bsmell\b|\bodor\b|\bodour\b/.test(source))terms.push('strong smells');
+ if(/\bchemical\b/.test(source))terms.push('chemicals');
+ if(terms.length===1&&terms[0]==='mold')return 'The mold in the shelter is affecting my health.';
+ if(terms.length)return 'The shelter conditions involving '+joinList(terms)+' are affecting my health.';
+ return housingSentences['smoke, mold, temperature, or other environmental conditions affected my health'];
+}
+function placeSentence(){
+ const where=val('incidentWhere'),office=val('office'),date=readableDate(val('incidentDate'));
+ let location='';
+ if(office&&/shelter|housing/i.test(where))location='at '+office+', a shelter or housing placement';
+ else if(office&&/dss office|center/i.test(where))location='at '+office+', a DSS office';
+ else if(office)location='through '+lowerFirst(where)+' involving '+office;
+ else location=where?lowerFirst(where):'during an interaction with DSS';
+ return 'The problem happened '+location+(date?' on '+date+'.':'. I do not know the exact date.');
+}
+function generate(){
+ const requested=dedupe([...checked('accom'),val('requested')]);
+ const situation=val('requestStatus'),problems=checked('problem'),impacts=checked('impact'),outcomes=checked('resolution');
+ const isEmergency=chosen('urgency')==='yes',denied=situation==='denied',possibleEmergency=isEmergency&&denied;
+ const housing=!$('housingDetails').hidden,diet=!$('dietDetails').hidden;
+ const representative=chosen('filing')==='other';
+ $('emergencyNotice').hidden=!possibleEmergency;$('urgentSafetyReview').hidden=!isEmergency;
+ let paragraphs=[];
+ let opening='I am filing a complaint (grievance) under Procedure 899 about disability-related help from Suffolk County DSS.';
+ if(representative)opening+=' I am filing for '+val('affectedName')+'.';
+ paragraphs.push(opening);
+ const what=joinList(requested);
+ let p='';
+ if(situation==='approved')p='DSS approved my request for '+what+'.';
+ else if(situation==='denied')p='DSS denied my request for '+what+'.';
+ else if(situation==='pending')p='I asked DSS for '+what+', but I have not received a decision.';
+ else if(situation==='never')p='I needed '+what+', but I did not know how to ask DSS for it.';
+ else p='I needed '+what+'. I am not sure what DSS decided about my request.';
+ if(val('requestDate'))p+=' I asked on '+readableDate(val('requestDate'))+'.';
+ paragraphs.push(p);
+ let events=[placeSentence()];
+ // Do not turn "something else happened" into a factual assertion; use the person's own account.
+ for(const v of problems){if(problemSentences[v]){
+   if(situation==='approved'&&v==='my approved accommodation was not provided')events.push('Even though DSS approved it, I did not receive the help.');
+   else events.push(problemSentences[v]);
+ }}
+ if(val('actual')&&!$('actualInfo').hidden){const a=val('actual');events.push(/^i\b/i.test(a)?sentence(a):'DSS provided '+sentence(lowerFirst(a)));}
+ if(housing){for(const h of checked('housingProblem'))events.push(h==='smoke, mold, temperature, or other environmental conditions affected my health'?environmentalSentence():(housingSentences[h]||sentence(h)));}
+ if(diet){for(const d of checked('dietProblem'))events.push(dietSentences[d]||sentence(d));
+   if(val('foodProviderResponse'))events.push('This is what I was told about the food: “'+val('foodProviderResponse')+'”.');
+   const safe=val('foodSafeNow');if(safe==='no')events.push('I cannot currently get enough food that is safe for me to eat.');
+   else if(safe==='sometimes')events.push('I can only sometimes get enough food that is safe for me to eat.');
+   else if(safe==='yes')events.push('I can currently get enough food that is safe for me to eat.');
+   else if(safe==='unsure')events.push('I am not sure whether I can get enough food that is safe for me to eat.');
+ }
+ if(val('story'))events.push(storySentence(val('story')));
+ if(val('witnesses')){
+   const w=val('witnesses');if(/\b(saw|witnessed|heard|noticed|can confirm|has seen)\b/i.test(w))events.push(sentence(w));
+   else events.push('Someone who may know what happened is '+w.replace(/[.!?]+$/,'')+'.');
+ }
+ // The selection may describe a request that was never formally denied; do not relabel it a denial.
+ if(housing&&val('housingCurrent')==='Yes')events.push('I am still staying at that shelter.');
+ else if(housing&&val('housingCurrent')==='No')events.push('I am no longer staying at that shelter.');
+ if(val('ongoing')==='Yes')events.push('The problem is still happening.');
+ else if(val('ongoing')==='No')events.push('The problem is no longer happening, but I still want DSS to review it.');
+ paragraphs.push(dedupe(events).join(' '));
+ let effects=impacts.map(v=>impactSentences[v]||sentence(v));
+ if(val('impactOther'))effects.push(sentence(val('impactOther')));
+ if(!$('spendingInfo').hidden&&val('spendingDetails')){const cost=val('spendingDetails');if(impacts.includes('I had to pay for food I could safely eat')){effects=effects.filter(x=>x!==impactSentences['I had to pay for food I could safely eat']);effects.push('I had to pay for my own safe food'+(/^about\b/i.test(cost)?'—'+lowerFirst(sentence(cost)):'. '+sentence(cost)));}else effects.push('I spent money because of this problem. '+sentence(cost));}
+ if(effects.length)paragraphs.push(dedupe(effects).join(' '));
+ if(val('reported')==='yes')paragraphs.push(pastReportSentence(val('pastReports')));
+ if(checked('evidence').length)paragraphs.push('I may be able to provide '+joinList(checked('evidence').map(v=>evidenceLabels[v]||v))+'.');
+ if(isEmergency){
+   let urgent='This is urgent, and I need help right away.';
+   if(val('urgentNeed'))urgent+=' '+sentence(val('urgentNeed'));
+   if(possibleEmergency)urgent+=' Because DSS denied an accommodation needed for emergency or immediate assistance, I ask DSS to consider this under the faster grievance process in Procedure 899.'+(val('denialDate')?' DSS said no on '+readableDate(val('denialDate'))+'.':'');
+   else urgent+=' I am asking DSS to respond right away while my request is being addressed.';
+   paragraphs.push(urgent);
+ }
+ else if(chosen('urgency')==='unsure')paragraphs.push('I am not sure whether this is considered an emergency. Please tell me promptly if any faster process applies.');
+ const special=outcomes.filter(v=>!['provide the accommodation I originally requested','provide an effective accommodation that meets my disability-related needs'].includes(v));
+ const basic=outcomes.filter(v=>!special.includes(v));
+ let request='Please review this problem and respond in writing.';
+ if(special.length){
+   request='I am asking DSS to '+joinList(dedupe(special.map(v=>resolutionSentences[v]||v)))+'.';
+   if(basic.length){request+=' Please also make sure the help DSS provides works for my disability'+(basic.includes('provide the accommodation I originally requested')?' and addresses what I first asked for':'')+'.';}
+ }else if(basic.length){request='I am asking DSS to '+joinList(basic.map(v=>resolutionSentences[v]||v))+'.';}
+ if(val('resolutionOther'))request+=' I also ask DSS to consider this request: '+sentence(val('resolutionOther'));
+ if(isEmergency)request+=' Please tell me what DSS will do right away to help.';
+ paragraphs.push(request);
+ const contact=val('contactPref');
+ paragraphs.push('Please confirm that DSS received this complaint, review what happened, and send me a written response explaining what DSS will do next.'+(contact?' I would like to hear from DSS by '+lowerFirst(contact)+'.':''));
+ let t='Dear ADA Compliance Officer,\n\n'+paragraphs.filter(Boolean).join('\n\n')+'\n\nThank you,\n'+val('fullName')+'\n';
+ if(representative){t+='Filing for: '+val('affectedName')+'\n';if(val('relationship'))t+='My relationship to this person: '+val('relationship')+'\n';if(val('permission'))t+='Permission to file: '+({yes:'Yes',no:'Not yet',unknown:'Not sure'}[val('permission')])+'\n'}
+ t+=line('Mailing address',val('mailAddress'));t+=line('Phone',$('noPhone').checked?'No phone number available':val('phone'));t+=line('Email',val('email'));
+ if(val('otherAgency')==='yes')t+='\nI also contacted another agency or court about this matter'+(val('otherAgencyDetail')?': '+val('otherAgencyDetail')+'.':'.')+'\n';
+ $('subjectField').value=possibleEmergency?'URGENT: Emergency Accommodation Grievance — Procedure 899':isEmergency?'URGENT: Disability-Related Accommodation Grievance — Procedure 899':'Reasonable Accommodation Grievance — Procedure 899';
+ $('draftText').value=t;$('ccField').value='';$('actionStatus').textContent='';updatePrint();
+}
+function updatePrint(){$('printHead').textContent='TO: '+val('toField')+'\n'+(val('ccField')?'CC: '+val('ccField')+'\n':'')+'SUBJECT: '+val('subjectField');$('printBody').textContent=val('draftText')}
+$('subjectField').addEventListener('input',updatePrint);$('ccField').addEventListener('input',updatePrint);$('draftText').addEventListener('input',updatePrint);
+function navigate(n){step=n;$$('.step').forEach((s,i)=>s.hidden=i!==n);$$('#progress li').forEach((li,i)=>{li.className=i===n?'current':i<n?'done':'';if(i===n)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current')});$('backBtn').hidden=n===0;$('nextBtn').hidden=n===5;$('errors').hidden=true;if(n===5)generate();document.activeElement?.blur?.();$('title-'+n).setAttribute('tabindex','-1');$('title-'+n).focus({preventScroll:true});window.scrollTo({top:0,behavior:'auto'})}
+$('nextBtn').addEventListener('click',()=>{if(validate(step))navigate(step+1)});$('backBtn').addEventListener('click',()=>navigate(step-1));
+$('copyButton').addEventListener('click',async()=>{const message=val('draftText');if(!message){$('actionStatus').textContent='Please finish your message first.';return;}try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(message)}else{const tmp=document.createElement('textarea');tmp.value=message;tmp.style.position='fixed';tmp.style.opacity='0';document.body.appendChild(tmp);tmp.select();if(!document.execCommand('copy'))throw Error('copy unavailable');tmp.remove()}$('actionStatus').textContent='Message copied! Open your email, add the To address and Subject shown above, then paste your message. Check it before pressing Send.'}catch(e){$('draftText').focus();$('draftText').select();$('actionStatus').textContent='Could not copy automatically. Copy the highlighted message, then paste it into your email.'}});
+$('printButton').addEventListener('click',()=>{updatePrint();window.print()});showWhen();
+})();
+</script>
+</body>
+</html>
